@@ -25,7 +25,6 @@ An Amazon Managed Service for Prometheus collector creates an Elastic Network In
 creating the scraper. The collector scrapes the metrics through these ENIs, and uses remote_write to push the data to
 your Amazon Managed Service for Prometheus workspace using a VPC endpoint. The scraped data never travels on the public
 internet.
-
 ## Usage
 
 **Stack Level**: Regional
@@ -66,7 +65,10 @@ components:
 Then reapply the given cluster component.
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -154,13 +156,19 @@ Then reapply the given cluster component.
 |------|-------------|
 | <a name="output_clusterrole_username"></a> [clusterrole\_username](#output\_clusterrole\_username) | The username of the ClusterRole used to give the scraper in-cluster permissions |
 | <a name="output_scraper_role_arn"></a> [scraper\_role\_arn](#output\_scraper\_role\_arn) | The Amazon Resource Name (ARN) of the IAM role that provides permissions for the scraper to discover, collect, and produce metrics |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/eks/prometheus-scraper) -
-  Cloud Posse's upstream component
-- [AMP Collector Documentation](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-eks-setup)
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+- [AMP Collector Documentation](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-collector-how-to.html#AMP-collector-eks-setup) - 
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-eks-prometheus-scraper&utm_content=)
+
